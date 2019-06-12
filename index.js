@@ -56,7 +56,7 @@ var mobileSchema = new mongoose.Schema({
    //  var response = req.body;
    //  var response = document.getElementById("unique_model").value;
    console.log(req.body.Mobile_name);
-    phone.find({mobile_name: '/'+req.body.Mobile_name+'/i'}, function(err, response){
+    phone.find({mobile_name: req.body.Mobile_name}, function(err, response){
        if(err) throw err;
        res.json(response);
        
